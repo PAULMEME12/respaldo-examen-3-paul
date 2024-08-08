@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Eliminar Artista</title>
+  </head>
+  <body>
+    <h1>Eliminar Artista</h1>
+    <p>¿Estás seguro de que deseas eliminar a {{ artista.nombre }}?</p>
+    <form method="post">
+      {% csrf_token %}
+      <button type="submit">Eliminar</button>
+    </form>
+    <a href="{% url 'detalle_artista' pk=artista.pk %}">Cancelar</a>
+  </body>
+</html>
